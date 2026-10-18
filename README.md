@@ -95,7 +95,7 @@ hooks 最该小心。新装的插件带 hooks 时，Codex 会让你先在 `/hook
 | 少写代码 | [ponytail](#3-ponytail能不写的代码就不写) | 2,059（6 个） | 带 hooks |
 | 长任务不断线 | [planning-with-files](#4-planning-with-files长任务把进度写进文件) | 837 | 带 7 个 hooks |
 | 画架构图、流程图 | [archify](#5-archify把代码和想法画成图) | 1,048 | 要 Node 18+ |
-| 前端好看一点 | [taste-skill](#6-taste-skill让前端别那么像-ai-做的) | 1,067 | 要 Node 22+ 和 Chrome |
+| 前端好看一点 | [taste-skill](#6-taste-skill让前端别那么像-ai-做的) | 1,067 | 装的名字是 `design-taste-frontend`；要 Node 22+ 和 Chrome |
 | 做 PPT | [guizang-ppt / codex-ppt](#7-做-pptguizang-ppt-和-codex-ppt) | 770 / 315 | 别用 Anthropic 的 pptx |
 | 写论文、科研图 | [nature-skills](#8-nature-skills写论文和科研绘图) | 全装 8,240 | 只装用得上的几个 |
 | 中文去 AI 味 | [shuorenhua](#9-shuorenhua中文去-ai-味) | 348 | 英文用 humanizer |
@@ -150,7 +150,7 @@ codex plugin marketplace add DietrichGebert/ponytail
 codex plugin add ponytail@ponytail
 ```
 
-装完在 Codex 里打开 `/hooks`，看过它的两个 hooks 再确认信任，然后开一个新对话。
+它带两个 hooks。装完在 Codex 里打开 `/hooks`，确认信任前先看它们要跑的脚本，然后开一个新对话。
 
 实测：6 个 skill 都能认到，清单多 2,059 字符，6 个正文加起来 20,999 字符。hooks 没有测。没有跑任务。
 
