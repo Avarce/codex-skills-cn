@@ -1,6 +1,6 @@
 # 在 Codex 里装 skill：放哪、怎么确认、怎么关
 
-> 核对：2026 年 10 月 18 日 · Codex CLI 0.162.1、0.163.0 · macOS
+> 核对：2026 年 10 月 19 日 · Codex CLI 0.162.1、0.163.0 · macOS
 
 ## 放在哪个文件夹
 
@@ -32,26 +32,33 @@ codex debug prompt-input "hi" | grep -o "archify: [^\\]*"
 
 Codex 每次请求都会带上所有 skill 的名字和说明，正文等用到时才读。官方说这份清单默认最多占上下文的 2%，装太多时会先截短说明，再不行就不列出。
 
-我们量的（CLI 0.163.0，默认模型）：
+我们量的（CLI 0.163.0，默认模型，10 月 19 日）：
 
 | 装了什么 | 清单多带多少字符 |
 |---|---|
 | 什么都不装（Codex 自带 5 个） | 约 2,000（底数） |
-| shuorenhua | 348 |
 | codex-ppt | 315 |
+| shuorenhua | 348 |
 | playwright / pdf | 422 / 447 |
+| frontend-design | 427 |
 | humanizer | 569 |
 | guizang-ppt | 770 |
 | planning-with-files | 837 |
-| archify | 1,048 |
-| taste-skill | 1,067 |
+| archify | 963 |
+| agent-browser | 1,144 |
+| taste-skill | 1,175 |
 | baoyu-skills 里的 4 个 | 1,751 |
 | ponytail（6 个） | 2,059 |
+| mattpocock/skills（27 个，11 个进清单） | 2,823 |
 | superpowers（15 个） | 3,506 |
+| hyperframes 核心（10 个） | 6,925 |
 | nature-skills 全装（23 个） | 8,240 |
-| 精选页上的全部（57 个） | 清单总共约 21,400 |
 
-全装上这次没有被截短，但每次请求都多带两万多字。所以只装用得上的：项目专用的放项目里的 `.agents/skills/`，暂时不用的按下面的办法关掉。
+手动叫的 skill（`agents/openai.yaml` 里关了自动触发的）不进清单，也就不占这份字数。mattpocock/skills 的 27 个里有 16 个是这种。
+
+**全装会被截短。** 这页上的全部装上是 96 个，其中 79 个进清单。单独装时这 79 条说明加起来约 29,800 字符；全装时清单总共只有约 22,200，Codex 把 48 条较长的说明截到了 240 到 550 字符，比如 agent-browser 的说明从 976 截到 263。一条都没丢，但说明被截短，Codex 判断什么时候该用哪个 skill 的依据就少了，自动触发可能变得不准。上一版只有 57 个时，全装没有截短。
+
+所以只装用得上的：项目专用的放项目里的 `.agents/skills/`，暂时不用的按下面的办法关掉。
 
 ## 插件和 hooks
 
@@ -73,6 +80,6 @@ enabled = false
 
 ## 我们怎么测的
 
-每次都用一个临时的空 HOME，不碰自己的 Codex 配置、也不登录：把 skill 复制进去，运行上面那条 `codex debug prompt-input`，看清单里有没有它、多了多少字符。推荐的仓库都克隆下来读过 `SKILL.md`、脚本和 hooks。没有在 Codex 里真正跑任务，效果以作者的说明和你自己试的为准。
+每次都用一个临时的空 HOME，不碰自己的 Codex 配置、也不登录：用精选页上印的那条命令安装，运行上面那条 `codex debug prompt-input`，看清单里有没有它、多了多少字符。量字数时把 skill 文件夹直接复制进去，每组单独量一次，再全装量一次。推荐的仓库都克隆下来读过 `SKILL.md`、脚本和 hooks。没有在 Codex 里真正跑任务，效果以作者的说明和你自己试的为准。
 
 [回到精选列表](README.md)
