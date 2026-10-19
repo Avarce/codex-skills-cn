@@ -2,7 +2,7 @@
 
 > **最后核对：2026 年 10 月 19 日**（北京时间）· Codex CLI 0.163.0
 >
-> 每个都看过源码，按页面上的命令装进 Codex 确认能认到。每两周更新一次，觉得有用就点右上角 ⭐ Star。
+> 每个都看过源码，装进 Codex 确认能认到；能用命令装的，都按页面上的命令重装过。每两周更新一次，觉得有用就点右上角 ⭐ Star。
 
 由 [AONIR](https://aonir.com/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=brand_home) 整理维护。我们提供 ChatGPT 会员充值服务，和 OpenAI 没有隶属关系；这页只讲 Codex 的 skill，充值相关只放在[最后一节](#国内怎么开通-codex)。
 
@@ -24,7 +24,7 @@
 | 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 「用 nature-figure 把这组实验数据画成期刊配图」 |
 | 中文去 AI 味 | [shuorenhua](#shuorenhua中文去-ai-味) | 「用 shuorenhua 改一下这段 README」 |
 | 公众号、小红书配图 | [baoyu-skills](#baoyu-skills公众号和小红书) | 「用 baoyu-xhs-images 把这篇笔记做成 6 张图卡」 |
-| 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 「$gh-fix-ci 看看这次 CI 为什么挂了」 |
+| 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 「$skill-installer pdf」 |
 
 在 Codex 里，可以输入 `$` 加 skill 名字直接叫它，也可以直接说要做什么，Codex 会按 skill 的说明自己挑。
 
