@@ -10,23 +10,23 @@
 
 ## 按需求挑
 
-| 我想 | 推荐 | 你可以这样说 |
+| 我想 | 推荐 | 装上以后，它会怎么做 |
 |---|---|---|
-| 让 AI 先想清楚再写代码 | [superpowers](#superpowers先想清楚再写代码) | 「我想给这个项目加一个导出 CSV 的功能」 |
-| 动手前让 AI 把我问清楚 | [mattpocock/skills](#mattpocockskills动手之前先把你问清楚) | 「grill me：我想给这个项目加一个导出功能」 |
-| 别乱加依赖、能少写就少写 | [ponytail](#ponytail能不写的代码就不写) | 「$ponytail-review 看看这次改动」 |
-| 大任务做到一半不断线 | [planning-with-files](#planning-with-files长任务把进度写进文件) | 「用 planning-with-files 规划：把项目从 JavaScript 迁到 TypeScript」 |
-| 看懂一个陌生项目 | [archify](#archify把代码和想法画成图) | 「用 archify 把这个仓库的架构画出来」 |
-| 前端做得好看 | [taste-skill / frontend-design](#taste-skill做出来的网页不像-ai-模板) | 「用 design-taste-frontend 给我的咖啡店做一个落地页」 |
-| 让 AI 自己打开网页测一遍 | [agent-browser](#agent-browser让-ai-自己开浏览器点一遍) | 「打开 localhost:3000，把注册流程走一遍并截图」 |
-| 做 PPT | [guizang-ppt](#guizang-ppt网页-ppt能改字能演示) / [codex-ppt](#codex-ppt每页一张图风格统一) | 「把这篇文章做成 10 页的 PPT」 |
-| 做视频 | [hyperframes](#hyperframes写网页出-mp4-视频) | 「用 hyperframes 做一个 10 秒的产品介绍视频」 |
-| 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 「用 nature-figure 把这组实验数据画成期刊配图」 |
-| 中文去 AI 味 | [shuorenhua](#shuorenhua中文去-ai-味) | 「用 shuorenhua 改一下这段 README」 |
-| 公众号、小红书配图 | [baoyu-skills](#baoyu-skills公众号和小红书) | 「用 baoyu-xhs-images 把这篇笔记做成 6 张图卡」 |
-| 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 「$skill-installer pdf」 |
+| 让 AI 先想清楚再写代码 | [superpowers](#superpowers先想清楚再写代码) | 先问需求、给几种做法让你选、写成计划，每一步先写测试，测试跑过才说做完 |
+| 动手前让 AI 把我问清楚 | [mattpocock/skills](#mattpocockskills动手之前先把你问清楚) | 一轮列出一组问题，每题附上建议答案，你点头或者改，问清了才写；还能把项目里的术语记成文档 |
+| 别乱加依赖、能少写就少写 | [ponytail](#ponytail能不写的代码就不写) | 写之前先问：真的要吗？项目里有没有？浏览器能不能直接做？作者的例子从 335 行减到 10 行 |
+| 大任务做到一半不断线 | [planning-with-files](#planning-with-files长任务把进度写进文件) | 把计划、查到的东西、做到哪一步写进三个文件，上下文压缩了、换了对话也能接着做 |
+| 看懂一个陌生项目 | [archify](#archify把代码和想法画成图) | 把整个代码库或一段描述画成架构图、流程图、时序图，浏览器里能点开看细节 |
+| 前端做得好看 | [taste-skill / frontend-design](#taste-skill做出来的网页不像-ai-模板) | 给 AI 一套字体、间距、配色的规矩，少出一眼就是 AI 做的模板页 |
+| 让 AI 自己打开网页测一遍 | [agent-browser](#agent-browser让-ai-自己开浏览器点一遍) | AI 自己开浏览器点按钮、填表、截图，把注册、下单流程走一遍找 bug |
+| 做 PPT | [guizang-ppt](#guizang-ppt网页-ppt能改字能演示) / [codex-ppt](#codex-ppt每页一张图风格统一) | guizang 做能改字、能上台演示的网页 PPT；codex-ppt 每页生成一张图，拼成 PPTX |
+| 做视频 | [hyperframes](#hyperframes写网页出-mp4-视频) | 用 HTML 和动画写出每一帧，渲染成 MP4，做产品介绍、字幕短视频、图表动画 |
+| 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 查文献、核引用、精读论文、按 Nature 风格润色、画期刊配图，22 个按需装 |
+| 中文去 AI 味 | [shuorenhua](#shuorenhua中文去-ai-味) | 删掉「值得注意的是」「简而言之」这类套话，事实和数字一个不动 |
+| 公众号、小红书配图 | [baoyu-skills](#baoyu-skills公众号和小红书) | 排版 Markdown、转成公众号能用的 HTML、做封面和小红书图卡 |
+| 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 读写 PDF 并检查版式；读 GitHub Actions 的日志，把 CI 修好 |
 
-在 Codex 里，可以输入 `$` 加 skill 名字直接叫它，也可以直接说要做什么，Codex 会按 skill 的说明自己挑。
+每一条下面的卡片上写了「你可以这样说」。在 Codex 里，可以输入 `$` 加 skill 名字直接叫它，也可以直接说要做什么，Codex 会按 skill 的说明自己挑。
 
 ## 本期值得看（10 月 19 日）
 
