@@ -306,8 +306,9 @@ playwright 要电脑上有 Node.js；pdf 会装几个 Python 库，渲染页面�
 | 套餐 | 微信付款 | 官方价 | Codex 额度 |
 |---|---|---|---|
 | [ChatGPT Plus](https://aonir.com/chatgpt-plus/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_plus) | ¥168 / 月 | $20 | 基准，每 5 小时和每周各有上限 |
-| [ChatGPT Pro 5×](https://aonir.com/chatgpt-pro/?plan=5x&utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_5x) | ¥730 / 月 | Pro 100，$100 | Plus 的 5 倍，没有 5 小时限制 |
-| [ChatGPT Pro 10×](https://aonir.com/chatgpt-pro/?plan=20x&utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_10x) | ¥1350 / 月，客服开通（账号需是免费版） | Pro 200，$200 | Plus 的 10 倍，没有 5 小时限制 |
+| [ChatGPT Pro 100（5×）](https://aonir.com/chatgpt-pro/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_5x) | ¥730 / 月 | Pro 100，$100 | 约为 Plus 的 5 倍 |
+| [ChatGPT Pro 200（10×）](https://aonir.com/chatgpt-pro-10x/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_10x) | ¥1400 / 月 | Pro 200，$200 | 约为 Plus 的 10 倍 |
+| [ChatGPT Pro 500](https://aonir.com/chatgpt-pro-500/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_500) | ¥3500 / 月，客服开通 | Pro 500，$500 | 约为 Plus 的 25 倍 |
 
 Codex 装不上、登录不了、报错，看我们另一个仓库：[Codex 国内使用与报错速查](https://github.com/Avarce/codex-china-guide)。
 
