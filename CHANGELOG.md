@@ -2,6 +2,10 @@
 
 收录、改动、撤下 skill，或者 Codex 改了 skill 的规则，这里记一笔。日期为北京时间。
 
+## 2026-10-30
+
+- 「国内怎么开通 Codex」的套餐表：美国时间 10 月 29 日起 Pro 三档的 Work / Codex 额度翻倍，倍数改为约为 Plus 的 10、20、50 倍，表下注明出处（OpenAI 帮助中心、Codex 负责人 Tibo）。收录的 skill 没有变化。
+
 ## 2026-10-19（第三版）
 
 - 新收 4 个：mattpocock/skills、agent-browser、hyperframes、frontend-design（和 taste-skill 放在一起）。都按页面上的命令在 Codex 0.163.0 里装过，能认到。
