@@ -1,6 +1,6 @@
 # Codex Skills 中文精选：装上就好用的 skill（2026）
 
-> **最后核对：2026 年 10 月 19 日**（北京时间）· Codex CLI 0.163.0
+> **最后更新：2026 年 10 月 30 日**（北京时间）· 收录的 skill 10 月 19 日在 Codex CLI 0.163.0 上核对
 >
 > 每个都看过源码，装进 Codex 确认能认到；能用命令装的，都按页面上的命令重装过。每两周更新一次，觉得有用就点右上角 ⭐ Star。
 
@@ -109,7 +109,7 @@ codex plugin add ponytail@ponytail
 npx skills add OthmanAdi/planning-with-files --skill planning-with-files --agent codex -g --yes
 ```
 
-想要它自动提醒和收尾检查，还可以装它的 hooks，步骤见作者的 [Codex 说明](https://github.com/OthmanAdi/planning-with-files/blob/main/docs/codex.md)。
+想要它自动提醒和收尾检查，还可以装它的 hooks，步骤见作者的 [Codex 说明](https://github.com/OthmanAdi/planning-with-files/blob/master/docs/codex.md)。
 
 ## 看项目、做网页、测网页
 
@@ -301,7 +301,7 @@ playwright 要电脑上有 Node.js；pdf 会装几个 Python 库，渲染页面�
 
 ## 国内怎么开通 Codex
 
-用 Codex 要有 ChatGPT 的套餐。Free 和 Go 只能在桌面版用少量的 GPT-5.6 Terra、GPT-6 Luna；GPT-6.1 Sol、Astra 和 CLI 要 Plus 起步。没有海外卡，可以微信付款，由 AONIR 充值到你自己的账号：
+用 Codex 要有 ChatGPT 的套餐。Free 和 Go 额度少，官方写的是在桌面版里用 GPT-5.6 Terra、GPT-6 Luna；GPT-6.1 Sol、GPT-6.1 Terra、Astra 和网页版的云端任务要 Plus 或 Pro。没有海外卡，可以微信付款，由 AONIR 充值到你自己的账号：
 
 | 套餐 | 微信付款 | 官方价 | Codex 额度 |
 |---|---|---|---|
@@ -310,7 +310,7 @@ playwright 要电脑上有 Node.js；pdf 会装几个 Python 库，渲染页面�
 | [ChatGPT Pro 200](https://aonir.com/chatgpt-pro-200/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_10x) | ¥1400 / 月 | Pro 200，$200 | 约为 Plus 的 20 倍 |
 | [ChatGPT Pro 500](https://aonir.com/chatgpt-pro-500/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_500) | ¥3500 / 月，客服开通 | Pro 500，$500 | 约为 Plus 的 50 倍 |
 
-美国时间 10 月 29 日起，Pro 三档的 Work / Codex 额度翻倍，Plus 不变（[OpenAI 帮助中心](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)、[Codex 负责人 Tibo](https://x.com/thsottiaux/status/2115850175868727621)）。
+美国时间 10 月 29 日起，Pro 三档的 Work / Codex 额度翻倍，Plus 不变（[OpenAI 帮助中心](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)）；表里的倍数是 [Codex 负责人 Tibo](https://x.com/thsottiaux/status/2115850175868727621) 的说法。
 
 Codex 装不上、登录不了、报错，看我们另一个仓库：[Codex 国内使用与报错速查](https://github.com/Avarce/codex-china-guide)。
 

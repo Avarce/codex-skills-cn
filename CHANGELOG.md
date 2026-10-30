@@ -6,6 +6,7 @@
 
 - 「国内怎么开通 Codex」的套餐表：美国时间 10 月 29 日起 Pro 三档的 Work / Codex 额度翻倍，倍数改为约为 Plus 的 10、20、50 倍，表下注明出处（OpenAI 帮助中心、Codex 负责人 Tibo）。收录的 skill 没有变化。
 - Pro 200 的 AONIR 链接换成新地址 `/chatgpt-pro-200/`（旧地址自动跳转）。
+- 更正：「国内怎么开通 Codex」原来写「GPT-6.1 Sol、Astra 和 CLI 要 Plus 起步」，改成官方的说法：Free 和 Go 在桌面版里用 GPT-5.6 Terra、GPT-6 Luna，GPT-6.1 Sol、GPT-6.1 Terra、Astra 和网页版的云端任务要 Plus 或 Pro；表下写明倍数是 Tibo 的说法（帮助中心只写了翻倍）。页首日期改为 10 月 30 日，收录的 skill 仍是 10 月 19 日核对的。planning-with-files 的 Codex 说明链接更新（作者把默认分支改成了 master）。
 
 ## 2026-10-19（第三版）
 
