@@ -2,6 +2,18 @@
 
 收录、改动、撤下 skill，或者 Codex 改了 skill 的规则，这里记一笔。日期为北京时间。
 
+## 2026-11-07（第二期）
+
+- 新收：飞书官方的 lark-cli 和它的 skill，放在新的「办公：飞书」一节。命令行工具（1.0.99）和本页那条命令装的 4 个 skill 都实测装上，Codex 能认到；建应用、登录飞书和实际读写没有测。
+- 页面上能用命令装的，都在 Codex CLI 0.167.0 上按页面命令重装了一遍，都能装上、能认到；superpowers 和 OpenAI 官方目录仍只核了能被认到。
+- taste-skill：10 月 20 日的 2.1.3 起仓库只留 `design-taste-frontend` 一个 skill，风格变体搬到 taste-skill-classics，出图类的搬到 imagegen-skills；11 月 5 日的 2.5.0 把它重写成专做公司官网和产品页。`npx skills add` 能装了，装法改回 `npx`，插件装法留作第二种。正文从约 38,400 字符（2.1.1）降到约 20,300（2.5.0）；frontend-design 从约 9,400 变成约 9,100。
+- hyperframes：`npx hyperframes skills update` 现在装核心 4 个（原来 10 个）。更正：做幻灯片这类活要你自己运行 `npx hyperframes skills update <名字>` 装对应的 skill，它不会自己装。
+- shuorenhua：装法从 git clone 加复制的 4 行，改成作者支持的 `npx skills add`。
+- ponytail：更正，它一直带三个 hooks，上一期写成两个，漏了开子任务时那个。补了它会按文件夹列出项目里已有的函数、类和导出放进上下文，以及怎么关。
+- nature-skills：现在 23 个（新加 researchwrite），另有共享的 `nature-shared`，全装 24 个；读 `nature-shared` 的有 10 个，说明改成通用的一句。
+- Codex 自带的 skill：0.167.0 里没有 `plugin-creator`，多了只能手动叫的 `review-agent`。
+- 安装说明：在 0.167.0 上重测了认哪些文件夹（和之前一样）、各组占多少字符（和 10 月 19 日的数字并排，两次格式不同，不能直接比），全装时的截短（每条说明不超过 188 字符，加上飞书全套只剩 92 字符）；补了官方新写的 `skills.max_context_tokens` 和实测效果；补了 0.164 起插件更新后 hooks 要重新确认。
+
 ## 2026-10-30
 
 - 「国内怎么开通 Codex」的套餐表：美国时间 10 月 29 日起 Pro 三档的 Work / Codex 额度翻倍，倍数改为约为 Plus 的 10、20、50 倍，表下注明出处（OpenAI 帮助中心、Codex 负责人 Tibo）。收录的 skill 没有变化。

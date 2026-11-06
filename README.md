@@ -1,6 +1,6 @@
 # Codex Skills 中文精选：装上就好用的 skill（2026）
 
-> **最后更新：2026 年 10 月 30 日**（北京时间）· 收录的 skill 10 月 19 日在 Codex CLI 0.163.0 上核对
+> **最后更新：2026 年 11 月 7 日**（北京时间）· 收录的 skill 11 月 7 日在 Codex CLI 0.167.0 上核对
 >
 > 每个都看过源码，装进 Codex 确认能认到；能用命令装的，都按页面上的命令重装过。每两周更新一次，觉得有用就点右上角 ⭐ Star。
 
@@ -21,27 +21,29 @@
 | 让 AI 自己打开网页测一遍 | [agent-browser](#agent-browser让-ai-自己开浏览器点一遍) | AI 自己开浏览器点按钮、填表、截图，把注册、下单流程走一遍找 bug |
 | 做 PPT | [guizang-ppt](#guizang-ppt网页-ppt能改字能演示) / [codex-ppt](#codex-ppt每页一张图风格统一) | guizang 做能改字、能上台演示的网页 PPT；codex-ppt 每页生成一张图，拼成 PPTX |
 | 做视频 | [hyperframes](#hyperframes写网页出-mp4-视频) | 用 HTML 和动画写出每一帧，渲染成 MP4，做产品介绍、字幕短视频、图表动画 |
-| 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 查文献、核引用、精读论文、按 Nature 风格润色、画期刊配图，22 个按需装 |
+| 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 查文献、核引用、精读论文、按 Nature 风格润色、画期刊配图，23 个按需装 |
 | 中文去 AI 味 | [shuorenhua](#shuorenhua中文去-ai-味) | 删掉「值得注意的是」「简而言之」这类套话，事实和数字一个不动 |
 | 公众号、小红书配图 | [baoyu-skills](#baoyu-skills公众号和小红书) | 排版 Markdown、转成公众号能用的 HTML、做封面和小红书图卡 |
+| 处理飞书文档、多维表格、日程 | [飞书 lark-cli](#飞书-lark-cli让-codex-读写你的飞书) | 用你自己的飞书账号读写云文档、多维表格，查日程、约会议、发消息 |
 | 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 读写 PDF 并检查版式；读 GitHub Actions 的日志，把 CI 修好 |
 
 每一条下面的卡片上写了「你可以这样说」。在 Codex 里，可以输入 `$` 加 skill 名字直接叫它，也可以直接说要做什么，Codex 会按 skill 的说明自己挑。
 
-## 本期值得看（10 月 19 日）
+## 本期值得看（11 月 7 日）
 
-这期新收 4 个。[skills.sh](https://www.skills.sh/) 总安装榜的前 11 名，除了第 1 名（skills 命令行自带的 find-skills），全部出自这 4 个仓库：
+这期新收 1 组：[飞书 lark-cli](#飞书-lark-cli让-codex-读写你的飞书)，飞书官方出的，带 28 个 skill，能让 Codex 用你的飞书账号读写云文档、多维表格、日历和消息。[skills.sh](https://www.skills.sh/) 总安装榜上，它的 lark-doc 排第 32（11 月 7 日）。
 
-| 新收 | 能帮你做什么 | skills.sh 总榜（10 月 19 日） |
-|---|---|---|
-| [mattpocock/skills](#mattpocockskills动手之前先把你问清楚) | 动手前把需求问清楚，测试先行，按步骤排查 bug | grill-me 第 2（139 万次安装），前 11 名里占 6 个 |
-| [agent-browser](#agent-browser让-ai-自己开浏览器点一遍) | 让 AI 自己开浏览器点按钮、填表、截图 | 第 4（117 万） |
-| [hyperframes](#hyperframes写网页出-mp4-视频) | 用 HTML 和动画写视频，渲染成 MP4 | hyperframes-cli 第 7、hyperframes 第 8 |
-| [frontend-design](#taste-skill做出来的网页不像-ai-模板) | Anthropic 出的前端审美规则，和 taste-skill 放在一起 | 第 11（100 万） |
+已收录的，11 月 7 日在 Codex CLI 0.167.0 上重新核了一遍：能用命令装的都按页面命令重装了，superpowers 和 OpenAI 官方目录要在登录后的 Codex 里装，这两个只核了能被认到。有这些变化：
 
-另外，这页的 skill 全装上一共 96 个，我们实测 Codex 已经开始截短说明：48 个较长的说明被截到 240 到 550 字符。挑着装，详见[安装说明](INSTALL.md#装多了会怎样)。
+- **taste-skill**：10 月 20 日的 2.1.3 起，仓库只留一个 skill，风格变体搬到了 taste-skill-classics，出图类的搬到了 imagegen-skills；11 月 5 日的 2.5.0 把它重写成专做公司官网和产品页。10 月 19 日的 2.1.1 用 `npx skills add` 装会报错，现在能装了，装法改回 `npx`。
+- **hyperframes**：同一条命令现在只装核心 4 个（10 月 19 日是 10 个），清单占用从约 6,900 字符降到约 1,400。
+- **shuorenhua**：作者支持 `npx skills add` 了，装法从 4 行改成 1 行。
+- **ponytail**：更正，它一直带三个 hooks，上一期写成了两个，漏了开子任务时那个。另外 Codex 0.164 起，插件更新后脚本有变动，hooks 要重新确认。
+- **Codex 自带的 skill**：`plugin-creator` 不见了，多了一个只能手动叫的 `review-agent`。
 
-已收录的有一处变化：taste-skill 作者 10 月 19 日发了 2.1.1 版，`npx skills add` 暂时装不上，装法改成了 Codex 插件。
+装多了会截短说明，这一期更明显：这页全装（不含飞书）时，每条说明都不超过 188 字符，80 条里有 55 条被截；再装上飞书全套，每条只剩 92 字符左右。挑着装，或者调大清单的额度，见[安装说明](INSTALL.md#装多了会怎样)。
+
+上一期（10 月 19 日）新收的 mattpocock/skills、agent-browser、hyperframes、frontend-design，记在[更新日志](CHANGELOG.md)里。
 
 ## 写代码
 
@@ -93,7 +95,7 @@ codex plugin marketplace add DietrichGebert/ponytail
 codex plugin add ponytail@ponytail
 ```
 
-它带两个 hooks（会自动运行的小脚本）。装完在 Codex 里打开 `/hooks`，看过脚本再确认，然后开一个新对话。
+它带三个 hooks（会自动运行的小脚本：会话开始、开子任务、你发消息时各跑一次）。装完在 Codex 里打开 `/hooks`，看过脚本再确认，然后开一个新对话。插件更新后脚本有变动，Codex 会让你再确认一次（0.164 起）。会话开始、恢复或压缩上下文时，它会按文件夹列出项目里已有的函数、类和导出（默认最多 2,000 字符）放进上下文，方便 AI 先复用；不想要就设环境变量 `PONYTAIL_MAP=0`。
 
 ### planning-with-files：长任务，把进度写进文件
 
@@ -135,16 +137,15 @@ npx skills add tt-a1i/archify --skill archify --agent codex -g --yes --copy
 
 [![Stars](https://img.shields.io/github/stars/Leonxlnx/taste-skill?style=flat&label=Stars)](https://github.com/Leonxlnx/taste-skill) [![last commit](https://img.shields.io/github/last-commit/Leonxlnx/taste-skill?style=flat)](https://github.com/Leonxlnx/taste-skill/commits) [![skills.sh](https://www.skills.sh/b/Leonxlnx/taste-skill)](https://www.skills.sh/Leonxlnx/taste-skill)
 
-给 AI 一套做网页的审美规则，字体、间距、配色、版式往成熟设计靠，少出那种一眼就是 AI 生成的渐变卡片页。仓库里有十几个风格变体，默认的叫 `design-taste-frontend`。适合落地页、个人站、产品介绍页。
+给 AI 一套做网页的审美规则，字体、间距、配色、版式往成熟设计靠，少出那种一眼就是 AI 生成的渐变卡片页。10 月 20 日的 2.1.3 起，仓库只留一个 skill，叫 `design-taste-frontend`；原来的风格变体搬到了作者的 [taste-skill-classics](https://github.com/Leonxlnx/taste-skill-classics)，出图类的搬到了 [imagegen-skills](https://github.com/Leonxlnx/imagegen-skills)。11 月 5 日的 2.5.0 把它重写成专做公司官网和产品页：配真实照片，做完用浏览器按几种屏幕宽度检查一遍。适合落地页、个人站、产品介绍页。
 
 ```bash
-codex plugin marketplace add Leonxlnx/taste-skill
-codex plugin add taste-skill@taste-skill
+npx skills add Leonxlnx/taste-skill --skill design-taste-frontend --agent codex -g --yes
 ```
 
-装完开一个新对话。要 Node 22 以上，电脑上要有 Chrome、Edge 或 Chromium；找配图要联网。作者 10 月 19 日发的 2.1.1 版，用 `npx skills add` 装会因为说明的格式报错被跳过，先用上面的插件装法。
+也可以装成 Codex 插件：`codex plugin marketplace add Leonxlnx/taste-skill`，再 `codex plugin add taste-skill@taste-skill`。两种都实测能装，挑一种就好。装完开一个新对话。要 Node 22 以上，电脑上要有 Chrome、Edge 或 Chromium；找配图要联网。10 月 19 日的 2.1.1 版用 `npx skills add` 装会报错，那时只能用插件装，2.5.0 已经正常。
 
-Anthropic 出的 [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)（Apache-2.0）是同一类，规则短得多：正文约 9,400 字符，taste-skill 约 38,400。想先试个轻的，装这个：
+Anthropic 出的 [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)（Apache-2.0）是同一类，规则短得多：正文约 9,100 字符（10 月 19 日约 9,400），taste-skill 2.5.0 约 20,300（10 月 19 日的 2.1.1 约 38,400）。想先试个轻的，装这个：
 
 ```bash
 npx skills add anthropics/skills --skill frontend-design --agent codex -g --yes
@@ -211,9 +212,9 @@ HeyGen 开源的视频框架：AI 用 HTML、CSS 和动画把每一帧写出来�
 npx hyperframes skills update
 ```
 
-这条装的是核心 10 个，做具体某一类视频时它会再装对应的流程，也会顺手给 Claude Code 装一份。要 Node.js 22 以上和 FFmpeg。OpenAI 官方插件市场里也有 HyperFrames，但里面还是旧版的 5 个 skill，建议用上面这条命令。
+这条装的是核心 4 个（`hyperframes`、`hyperframes-cli`、`hyperframes-registry`、`media-use`；10 月 19 日同一条命令装的是 10 个），也会顺手给 Claude Code 装一份。做幻灯片、仿某个视频这类活要另装对应的 skill：它会告诉你装哪个，你自己运行 `npx hyperframes skills update <名字>`。要 Node.js 22 以上和 FFmpeg。10 月 19 日我们看时，OpenAI 官方插件市场里的 HyperFrames 还是旧版的 5 个 skill，建议用上面这条命令。
 
-10 个的说明加起来让清单多 6,900 字符，不做视频的时候可以[停用](INSTALL.md#怎么关怎么卸)。
+4 个的说明让清单多约 1,400 字符，不做视频的时候可以[停用](INSTALL.md#怎么关怎么卸)。
 
 ## 论文和写作
 
@@ -223,7 +224,7 @@ npx hyperframes skills update
 
 [![Stars](https://img.shields.io/github/stars/Yuan1z0825/nature-skills?style=flat&label=Stars)](https://github.com/Yuan1z0825/nature-skills) [![last commit](https://img.shields.io/github/last-commit/Yuan1z0825/nature-skills?style=flat)](https://github.com/Yuan1z0825/nature-skills/commits) [![skills.sh](https://www.skills.sh/b/Yuan1z0825/nature-skills)](https://www.skills.sh/Yuan1z0825/nature-skills)
 
-中文作者做的一整套科研 skill，22 个：查文献、核引用、精读论文出阅读卡、按 Nature 风格润色、画期刊配图、论文转中文 PPT、写数据可用性声明，还能把论文改成专利草稿。
+中文作者做的一整套科研 skill，23 个：查文献、核引用、精读论文出阅读卡、按 Nature 风格润色、画期刊配图、论文转中文 PPT、写数据可用性声明，还能把论文改成专利草稿。
 
 一次别全装，用到哪个装哪个。比如只要画图：
 
@@ -231,7 +232,7 @@ npx hyperframes skills update
 npx skills add Yuan1z0825/nature-skills --agent codex --skill nature-figure --yes --copy
 ```
 
-这条装进当前项目；加 `--global` 就所有项目都能用。装 `nature-writing`、`nature-polishing`、`nature-reader`、`nature-paper2ppt` 时，要把 `nature-shared` 一起装上。
+这条装进当前项目；加 `--global` 就所有项目都能用。`nature-shared` 是共享文件包，写作、润色、精读、转 PPT、统计、审稿回复这些都会读它（11 月 7 日数过有 10 个），装它们时加上 `--skill nature-shared`。上面的 nature-figure 只在投 Nature Machine Intelligence 时才用到它。
 
 ### shuorenhua：中文去 AI 味
 
@@ -239,13 +240,10 @@ npx skills add Yuan1z0825/nature-skills --agent codex --skill nature-figure --ye
 
 [![Stars](https://img.shields.io/github/stars/MrGeDiao/shuorenhua?style=flat&label=Stars)](https://github.com/MrGeDiao/shuorenhua) [![last commit](https://img.shields.io/github/last-commit/MrGeDiao/shuorenhua?style=flat)](https://github.com/MrGeDiao/shuorenhua/commits) [![skills.sh](https://www.skills.sh/b/MrGeDiao/shuorenhua)](https://www.skills.sh/MrGeDiao/shuorenhua)
 
-改写中文，去掉模板腔，事实和数字一个不丢，图里是作者给的例子。写 README、公众号、周报、产品说明时用得上，也可以只标出问题不改。在你的项目根目录运行：
+改写中文，去掉模板腔，事实和数字一个不丢，图里是作者给的例子。写 README、公众号、周报、产品说明时用得上，也可以只标出问题不改。
 
 ```bash
-git clone --depth 1 https://github.com/MrGeDiao/shuorenhua.git /tmp/shuorenhua
-mkdir -p .agents/skills/shuorenhua/references
-cp /tmp/shuorenhua/SKILL.md .agents/skills/shuorenhua/
-cp /tmp/shuorenhua/references/editing-guide.md /tmp/shuorenhua/references/examples.md .agents/skills/shuorenhua/references/
+npx skills add MrGeDiao/shuorenhua --agent codex -g --yes
 ```
 
 英文用 [blader/humanizer](https://github.com/blader/humanizer)（MIT），按维基百科总结的「AI 写作迹象」改英文：`npx skills add blader/humanizer --global --agent codex --yes`。
@@ -266,13 +264,39 @@ npx skills add jimliu/baoyu-skills --agent codex -g \
 
 出图在 Codex 里会用自带的 `imagegen`，用的是你的额度。
 
+## 办公：飞书
+
+### 飞书 lark-cli：让 Codex 读写你的飞书
+
+<a href="https://github.com/larksuite/cli"><img src="assets/cards/lark-cli.webp" alt="飞书 lark-cli：先装命令行工具，挑要用的 skill，在浏览器里建应用并登录，然后让 Codex 读写你的飞书" width="100%"></a>
+
+[![Stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&label=Stars)](https://github.com/larksuite/cli) [![last commit](https://img.shields.io/github/last-commit/larksuite/cli?style=flat)](https://github.com/larksuite/cli/commits) [![skills.sh](https://www.skills.sh/b/larksuite/cli)](https://www.skills.sh/larksuite/cli)
+
+飞书官方（larksuite 团队）出的命令行工具，MIT 许可，带 28 个 skill：云文档、知识库、多维表格、电子表格、幻灯片、日历、消息、邮件、会议纪要、任务、审批、OKR。装上以后，Codex 用你自己的飞书账号去读写这些东西，比如「把这篇飞书文档总结成三条」「在这个多维表格里加一列，把这周的数据填进去」「看看我明天下午有没有空，约个会」。
+
+分两步装：先装命令行工具，再挑要用的 skill。`lark-shared` 一定要装，其他几个靠它登录和处理权限；下面这条装了文档、多维表格、日历，按需增减：
+
+```bash
+npm install -g @larksuite/cli
+npx skills add https://open.feishu.cn/lark-cli/skills/regular --agent codex -g --yes \
+  --skill lark-shared --skill lark-doc --skill lark-base --skill lark-calendar
+```
+
+要发消息、看群聊，再加 `--skill lark-im`。新版 npm 装第一条时可能提示 `install scripts not yet covered by allowScripts`，这不是失败：第一次运行 `lark-cli` 时它会自己下载程序（约 46MB）。
+
+装完运行 `lark-cli config init`，按提示在浏览器里建一个飞书应用；再运行 `lark-cli auth login --recommend` 登录，授权常用的权限。
+
+作者也给了一键安装 `npx @larksuite/cli@latest install`，会带你建应用、登录，但它会在它认识的 53 个 AI 工具的文件夹里都放上这 28 个 skill（一份实体，其余是链接）。只给 Codex 用，按上面两条装更干净。28 个全装会让清单多约 7,100 字符，所以只装用得到的。
+
+它是用你的身份在操作飞书。官方的安全提示写了：AI 可能看错，也可能被文档里写的指令带偏，授权以后它能读写你授权范围内的数据。它的规则里，写入和删除之前要先问你，高风险操作要你明确同意；官方建议只给自己用，不要把它的机器人拉进群。我们测了命令行工具能装上（1.0.99）、skill 能被 Codex 认到；建应用、登录飞书和实际读写都没有测。
+
 ## OpenAI 官方目录：浏览器、PDF、GitHub
 
 <a href="https://github.com/openai/skills"><img src="assets/cards/openai-skills.webp" alt="OpenAI 官方 skill 目录：playwright、pdf、gh-fix-ci 等" width="100%"></a>
 
 [![Stars](https://img.shields.io/github/stars/openai/skills?style=flat&label=Stars)](https://github.com/openai/skills) [![last commit](https://img.shields.io/github/last-commit/openai/skills?style=flat)](https://github.com/openai/skills/commits) [![skills.sh](https://www.skills.sh/b/openai/skills)](https://www.skills.sh/openai/skills)
 
-Codex 自带 5 个：画图的 `imagegen`、查官方文档的 `openai-docs`、做插件的 `plugin-creator`、做 skill 的 `skill-creator`、装 skill 的 `skill-installer`。另外有 39 个精选的可以按需装，这几个最常用：
+Codex 0.167.0 自带 5 个：画图的 `imagegen`、查官方文档的 `openai-docs`、做 skill 的 `skill-creator`、装 skill 的 `skill-installer`，还有一个只能手动叫的 `review-agent`（审代码改动）。10 月 19 日那版的 `plugin-creator` 不在了。另外有 39 个精选的可以按需装，这几个最常用：
 
 | skill | 能帮你做什么 |
 |---|---|
