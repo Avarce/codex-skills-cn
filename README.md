@@ -1,31 +1,43 @@
 # Codex Skills 中文精选：装上就好用的 skill（2026）
 
-> **最后更新：2026 年 11 月 7 日**（北京时间）· 收录的 skill 11 月 7 日在 Codex CLI 0.167.0 上核对
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.webp">
+  <img src="assets/banner.webp" alt="Codex Skills 中文精选：按需求挑，装上就能用。写代码、看项目、做网页、PPT、视频、论文、飞书，每个都看过源码、装进 Codex 实测，每两周更新" width="100%">
+</picture>
+
+> **最后更新：2026 年 11 月 14 日**（北京时间）· 收录的 skill 11 月 7 日在 Codex CLI 0.167.0 上核对
 >
 > 每个都看过源码，装进 Codex 确认能认到；能用命令装的，都按页面上的命令重装过。每两周更新一次，觉得有用就点右上角 ⭐ Star。
 
-由 [AONIR](https://aonir.com/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=brand_home) 整理维护。我们提供 ChatGPT 会员充值服务，和 OpenAI 没有隶属关系；这页只讲 Codex 的 skill，充值相关只放在[最后一节](#国内怎么开通-codex)。
+<table>
+  <tr>
+    <td width="200" align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/logo-aonir-dark.png"><img src="assets/logo-aonir.png" width="180" alt="AONIR 官网 aonir.com"></picture></td>
+    <td><a href="https://aonir.com/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=brand_home"><b>AONIR</b></a> · 官网 aonir.com<br>本页维护方，提供 ChatGPT 充值服务。没有海外卡，可以用微信付款，会员充到你本人的 ChatGPT 账号。</td>
+  </tr>
+</table>
 
-第一次在 Codex 里装 skill，先看[安装说明](INSTALL.md)：Codex 认哪几个文件夹、怎么确认装上了、装多了有什么影响。
+第一次在 Codex 里装 skill，先看[安装说明](INSTALL.md)：Codex 认哪几个文件夹、怎么确认装上了、装多了有什么影响。Codex 本身装不上、登录不了、报错，看我们另一个仓库：[Codex 国内使用与报错速查](https://github.com/Avarce/codex-china-guide)。
+
+**分类：**[写代码](#写代码) · [看项目、做网页、测网页](#看项目做网页测网页) · [做 PPT 和视频](#做-ppt-和视频) · [论文和写作](#论文和写作) · [办公：飞书](#办公飞书) · [OpenAI 官方目录](#openai-官方目录浏览器pdfgithub) · [深度解读](#深度解读)
 
 ## 按需求挑
 
-| 我想 | 推荐 | 装上以后，它会怎么做 |
-|---|---|---|
-| 让 AI 先想清楚再写代码 | [superpowers](#superpowers先想清楚再写代码) | 先问需求、给几种做法让你选、写成计划，每一步先写测试，测试跑过才说做完 |
-| 动手前让 AI 把我问清楚 | [mattpocock/skills](#mattpocockskills动手之前先把你问清楚) | 一轮列出一组问题，每题附上建议答案，你点头或者改，问清了才写；还能把项目里的术语记成文档 |
-| 别乱加依赖、能少写就少写 | [ponytail](#ponytail能不写的代码就不写) | 写之前先问：真的要吗？项目里有没有？浏览器能不能直接做？作者的例子从 335 行减到 10 行 |
-| 大任务做到一半不断线 | [planning-with-files](#planning-with-files长任务把进度写进文件) | 把计划、查到的东西、做到哪一步写进三个文件，上下文压缩了、换了对话也能接着做 |
-| 看懂一个陌生项目 | [archify](#archify把代码和想法画成图) | 把整个代码库或一段描述画成架构图、流程图、时序图，浏览器里能点开看细节 |
-| 前端做得好看 | [taste-skill / frontend-design](#taste-skill做出来的网页不像-ai-模板) | 给 AI 一套字体、间距、配色的规矩，少出一眼就是 AI 做的模板页 |
-| 让 AI 自己打开网页测一遍 | [agent-browser](#agent-browser让-ai-自己开浏览器点一遍) | AI 自己开浏览器点按钮、填表、截图，把注册、下单流程走一遍找 bug |
-| 做 PPT | [guizang-ppt](#guizang-ppt网页-ppt能改字能演示) / [codex-ppt](#codex-ppt每页一张图风格统一) | guizang 做能改字、能上台演示的网页 PPT；codex-ppt 每页生成一张图，拼成 PPTX |
-| 做视频 | [hyperframes](#hyperframes写网页出-mp4-视频) | 用 HTML 和动画写出每一帧，渲染成 MP4，做产品介绍、字幕短视频、图表动画 |
-| 写论文、画科研图 | [nature-skills](#nature-skills写论文和科研绘图) | 查文献、核引用、精读论文、按 Nature 风格润色、画期刊配图，23 个按需装 |
-| 中文去 AI 味 | [shuorenhua](#shuorenhua中文去-ai-味) | 删掉「值得注意的是」「简而言之」这类套话，事实和数字一个不动 |
-| 公众号、小红书配图 | [baoyu-skills](#baoyu-skills公众号和小红书) | 排版 Markdown、转成公众号能用的 HTML、做封面和小红书图卡 |
-| 处理飞书文档、多维表格、日程 | [飞书 lark-cli](#飞书-lark-cli让-codex-读写你的飞书) | 用你自己的飞书账号读写云文档、多维表格，查日程、约会议、发消息 |
-| 处理 PDF、修好挂掉的 CI | [OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub) | 读写 PDF 并检查版式；读 GitHub Actions 的日志，把 CI 修好 |
+| 我想 | 推荐：装上以后，它会怎么做 |
+|---|---|
+| 让 AI 先想清楚再写代码 | **[superpowers](#superpowers先想清楚再写代码)**：先问需求、给几种做法让你选、写成计划，每一步先写测试，测试跑过才说做完 |
+| 动手前让 AI 把我问清楚 | **[mattpocock/skills](#mattpocockskills动手之前先把你问清楚)**：一轮列出一组问题，每题附上建议答案，你点头或者改，问清了才写；还能把项目里的术语记成文档 |
+| 别乱加依赖、能少写就少写 | **[ponytail](#ponytail能不写的代码就不写)**：写之前先问真的要吗、项目里有没有、浏览器能不能直接做；作者的例子从 335 行减到 10 行 |
+| 大任务做到一半不断线 | **[planning-with-files](#planning-with-files长任务把进度写进文件)**：把计划、查到的东西、做到哪一步写进三个文件，上下文压缩了、换了对话也能接着做 |
+| 看懂一个陌生项目 | **[archify](#archify把代码和想法画成图)**：把整个代码库或一段描述画成架构图、流程图、时序图，浏览器里能点开看细节 |
+| 前端做得好看 | **[taste-skill / frontend-design](#taste-skill做出来的网页不像-ai-模板)**：给 AI 一套字体、间距、配色的规矩，少出一眼就是 AI 做的模板页 |
+| 让 AI 自己打开网页测一遍 | **[agent-browser](#agent-browser让-ai-自己开浏览器点一遍)**：AI 自己开浏览器点按钮、填表、截图，把注册、下单流程走一遍找 bug |
+| 做 PPT | **[guizang-ppt](#guizang-ppt网页-ppt能改字能演示)** 做能改字、能上台演示的网页 PPT；**[codex-ppt](#codex-ppt每页一张图风格统一)** 每页生成一张图，拼成 PPTX |
+| 做视频 | **[hyperframes](#hyperframes写网页出-mp4-视频)**：用 HTML 和动画写出每一帧，渲染成 MP4，做产品介绍、字幕短视频、图表动画 |
+| 写论文、画科研图 | **[nature-skills](#nature-skills写论文和科研绘图)**：查文献、核引用、精读论文、按 Nature 风格润色、画期刊配图，23 个按需装 |
+| 中文去 AI 味 | **[shuorenhua](#shuorenhua中文去-ai-味)**：删掉「值得注意的是」「简而言之」这类套话，事实和数字一个不动 |
+| 公众号、小红书配图 | **[baoyu-skills](#baoyu-skills公众号和小红书)**：排版 Markdown、转成公众号能用的 HTML、做封面和小红书图卡 |
+| 处理飞书文档、多维表格、日程 | **[飞书 lark-cli](#飞书-lark-cli让-codex-读写你的飞书)**：用你自己的飞书账号读写云文档、多维表格，查日程、约会议、发消息 |
+| 处理 PDF、修好挂掉的 CI | **[OpenAI 官方 skill](#openai-官方目录浏览器pdfgithub)**：读写 PDF 并检查版式；读 GitHub Actions 的日志，把 CI 修好 |
 
 每一条下面的卡片上写了「你可以这样说」。在 Codex 里，可以输入 `$` 加 skill 名字直接叫它，也可以直接说要做什么，Codex 会按 skill 的说明自己挑。
 
@@ -45,13 +57,15 @@
 
 上一期（10 月 19 日）新收的 mattpocock/skills、agent-browser、hyperframes、frontend-design，记在[更新日志](CHANGELOG.md)里。
 
+11 月 14 日补：ponytail 卡片上的 hooks 数改成 3 个（正文上一期已更正，卡片漏改了）；archify 10 月 25 日起改用 Apache-2.0，卡片跟着改；[superpowers 深度解读](deep-dives/superpowers.md)按 7.0.2 更新。
+
 ## 写代码
 
 ### superpowers：先想清楚，再写代码
 
-<a href="https://github.com/obra/superpowers"><img src="assets/cards/superpowers.webp" alt="superpowers：先问清需求，给几种做法让你选，写成计划，每一步先写测试，跑过测试才说做完" width="100%"></a>
+<a href="https://github.com/obra/superpowers"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/superpowers-dark.webp"><img src="assets/cards/superpowers.webp" alt="superpowers：先问清需求，给几种做法让你选，写成计划，每一步先写测试，跑过测试才说做完" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/obra/superpowers?style=flat&label=Stars)](https://github.com/obra/superpowers) [![last commit](https://img.shields.io/github/last-commit/obra/superpowers?style=flat)](https://github.com/obra/superpowers/commits) [![skills.sh](https://www.skills.sh/b/obra/superpowers)](https://www.skills.sh/obra/superpowers)
+[![Stars](https://img.shields.io/github/stars/obra/superpowers?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/obra/superpowers) [![last commit](https://img.shields.io/github/last-commit/obra/superpowers?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/obra/superpowers/commits) [![skills.sh](https://www.skills.sh/b/obra/superpowers)](https://www.skills.sh/obra/superpowers)
 
 你说「帮我加个导出功能」，没装它的 Codex 多半直接开始改。装了它，Codex 会先问你几个问题、给出两三种做法让你选，把方案写成计划，再按计划一步步做，每一步先写测试，最后跑过测试才说做完。修 bug 也有专门的流程：先复现、找到原因再改。
 
@@ -63,9 +77,9 @@
 
 ### mattpocock/skills：动手之前，先把你问清楚
 
-<a href="https://github.com/mattpocock/skills"><img src="assets/cards/mattpocock-skills.webp" alt="mattpocock/skills：一轮列出一组问题，每题附上建议的答案，问完才开始写" width="100%"></a>
+<a href="https://github.com/mattpocock/skills"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/mattpocock-skills-dark.webp"><img src="assets/cards/mattpocock-skills.webp" alt="mattpocock/skills：一轮列出一组问题，每题附上建议的答案，问完才开始写" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/mattpocock/skills?style=flat&label=Stars)](https://github.com/mattpocock/skills) [![last commit](https://img.shields.io/github/last-commit/mattpocock/skills?style=flat)](https://github.com/mattpocock/skills/commits) [![skills.sh](https://www.skills.sh/b/mattpocock/skills)](https://www.skills.sh/mattpocock/skills)
+[![Stars](https://img.shields.io/github/stars/mattpocock/skills?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/mattpocock/skills) [![last commit](https://img.shields.io/github/last-commit/mattpocock/skills?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/mattpocock/skills/commits) [![skills.sh](https://www.skills.sh/b/mattpocock/skills)](https://www.skills.sh/mattpocock/skills)
 
 TypeScript 讲师 Matt Pocock 自己每天用的一套。最出名的是 grill（拷问）：你说要做什么，它一轮列出一组问题，每题附上它建议的答案，你回 yes 或者改，问到没有含糊的地方才动手。`grill-with-docs` 还会边问边把项目里的术语记进 `GLOSSARY.md`、把重要决定记下来，下次 AI 读这些文件就懂你的说法。
 
@@ -82,9 +96,9 @@ codex plugin add mattpocock-skills@mattpocock
 
 ### ponytail：能不写的代码就不写
 
-<a href="https://github.com/DietrichGebert/ponytail"><img src="assets/cards/ponytail.webp" alt="ponytail 前后对比：加一个日期选择器，没装时写了 335 行，装了以后 10 行" width="100%"></a>
+<a href="https://github.com/DietrichGebert/ponytail"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/ponytail-dark.webp"><img src="assets/cards/ponytail.webp" alt="ponytail 前后对比：加一个日期选择器，没装时写了 335 行，装了以后 10 行" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/DietrichGebert/ponytail?style=flat&label=Stars)](https://github.com/DietrichGebert/ponytail) [![last commit](https://img.shields.io/github/last-commit/DietrichGebert/ponytail?style=flat)](https://github.com/DietrichGebert/ponytail/commits) [![skills.sh](https://www.skills.sh/b/DietrichGebert/ponytail)](https://www.skills.sh/DietrichGebert/ponytail)
+[![Stars](https://img.shields.io/github/stars/DietrichGebert/ponytail?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/DietrichGebert/ponytail) [![last commit](https://img.shields.io/github/last-commit/DietrichGebert/ponytail?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/DietrichGebert/ponytail/commits) [![skills.sh](https://www.skills.sh/b/DietrichGebert/ponytail)](https://www.skills.sh/DietrichGebert/ponytail)
 
 AI 写代码前先过几道问题：这东西真的要吗？项目里是不是已经有了？浏览器、标准库能不能直接做？图里是作者给的例子，同样是「加一个日期选择器」，没装时 AI 写了 335 行，装了以后用浏览器自带的日期输入框，10 行。
 
@@ -99,9 +113,9 @@ codex plugin add ponytail@ponytail
 
 ### planning-with-files：长任务，把进度写进文件
 
-<a href="https://github.com/OthmanAdi/planning-with-files"><img src="assets/cards/planning-with-files.webp" alt="planning-with-files：计划、查到的东西、做到哪一步分别写进三个文件，断了也能接着做" width="100%"></a>
+<a href="https://github.com/OthmanAdi/planning-with-files"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/planning-with-files-dark.webp"><img src="assets/cards/planning-with-files.webp" alt="planning-with-files：计划、查到的东西、做到哪一步分别写进三个文件，断了也能接着做" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/OthmanAdi/planning-with-files?style=flat&label=Stars)](https://github.com/OthmanAdi/planning-with-files) [![last commit](https://img.shields.io/github/last-commit/OthmanAdi/planning-with-files?style=flat)](https://github.com/OthmanAdi/planning-with-files/commits) [![skills.sh](https://www.skills.sh/b/OthmanAdi/planning-with-files)](https://www.skills.sh/OthmanAdi/planning-with-files)
+[![Stars](https://img.shields.io/github/stars/OthmanAdi/planning-with-files?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/OthmanAdi/planning-with-files) [![last commit](https://img.shields.io/github/last-commit/OthmanAdi/planning-with-files?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/OthmanAdi/planning-with-files/commits) [![skills.sh](https://www.skills.sh/b/OthmanAdi/planning-with-files)](https://www.skills.sh/OthmanAdi/planning-with-files)
 
 做多步骤的大任务时，让 AI 把计划、查到的东西、做到哪一步分别写进 `task_plan.md`、`findings.md`、`progress.md`。Codex 的长会话经常要压缩上下文，压缩完、断了、换个对话，它都能从这几个文件里接着做。
 
@@ -117,9 +131,9 @@ npx skills add OthmanAdi/planning-with-files --skill planning-with-files --agent
 
 ### archify：把代码和想法画成图
 
-<a href="https://github.com/tt-a1i/archify"><img src="assets/cards/archify.webp" alt="archify 生成的系统架构图" width="100%"></a>
+<a href="https://github.com/tt-a1i/archify"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/archify-dark.webp"><img src="assets/cards/archify.webp" alt="archify 生成的系统架构图" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/tt-a1i/archify?style=flat&label=Stars)](https://github.com/tt-a1i/archify) [![last commit](https://img.shields.io/github/last-commit/tt-a1i/archify?style=flat)](https://github.com/tt-a1i/archify/commits) [![skills.sh](https://www.skills.sh/b/tt-a1i/archify)](https://www.skills.sh/tt-a1i/archify)
+[![Stars](https://img.shields.io/github/stars/tt-a1i/archify?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/tt-a1i/archify) [![last commit](https://img.shields.io/github/last-commit/tt-a1i/archify?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/tt-a1i/archify/commits) [![skills.sh](https://www.skills.sh/b/tt-a1i/archify)](https://www.skills.sh/tt-a1i/archify)
 
 把一段描述、一个计划或者整个代码库画成图：架构图、流程图、时序图、数据流、状态机、ER 图都行。输出一个 HTML 文件，浏览器打开，节点能点开看细节，能切深色浅色。
 
@@ -133,9 +147,9 @@ npx skills add tt-a1i/archify --skill archify --agent codex -g --yes --copy
 
 ### taste-skill：做出来的网页不像 AI 模板
 
-<a href="https://github.com/Leonxlnx/taste-skill"><img src="assets/cards/taste-skill.webp" alt="taste-skill 做的活动网站首页" width="100%"></a>
+<a href="https://github.com/Leonxlnx/taste-skill"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/taste-skill-dark.webp"><img src="assets/cards/taste-skill.webp" alt="taste-skill 做的咖啡店网站首页" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/Leonxlnx/taste-skill?style=flat&label=Stars)](https://github.com/Leonxlnx/taste-skill) [![last commit](https://img.shields.io/github/last-commit/Leonxlnx/taste-skill?style=flat)](https://github.com/Leonxlnx/taste-skill/commits) [![skills.sh](https://www.skills.sh/b/Leonxlnx/taste-skill)](https://www.skills.sh/Leonxlnx/taste-skill)
+[![Stars](https://img.shields.io/github/stars/Leonxlnx/taste-skill?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/Leonxlnx/taste-skill) [![last commit](https://img.shields.io/github/last-commit/Leonxlnx/taste-skill?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/Leonxlnx/taste-skill/commits) [![skills.sh](https://www.skills.sh/b/Leonxlnx/taste-skill)](https://www.skills.sh/Leonxlnx/taste-skill)
 
 给 AI 一套做网页的审美规则，字体、间距、配色、版式往成熟设计靠，少出那种一眼就是 AI 生成的渐变卡片页。10 月 20 日的 2.1.3 起，仓库只留一个 skill，叫 `design-taste-frontend`；原来的风格变体搬到了作者的 [taste-skill-classics](https://github.com/Leonxlnx/taste-skill-classics)，出图类的搬到了 [imagegen-skills](https://github.com/Leonxlnx/imagegen-skills)。11 月 5 日的 2.5.0 把它重写成专做公司官网和产品页：配真实照片，做完用浏览器按几种屏幕宽度检查一遍。适合落地页、个人站、产品介绍页。
 
@@ -153,9 +167,9 @@ npx skills add anthropics/skills --skill frontend-design --agent codex -g --yes
 
 ### agent-browser：让 AI 自己开浏览器点一遍
 
-<a href="https://github.com/vercel-labs/agent-browser"><img src="assets/cards/agent-browser.webp" alt="agent-browser：打开网页，读出页面结构并给元素编号，按编号点按钮、填表，截图对比" width="100%"></a>
+<a href="https://github.com/vercel-labs/agent-browser"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/agent-browser-dark.webp"><img src="assets/cards/agent-browser.webp" alt="agent-browser：打开网页，读出页面结构并给元素编号，按编号点按钮、填表，截图对比" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/vercel-labs/agent-browser?style=flat&label=Stars)](https://github.com/vercel-labs/agent-browser) [![last commit](https://img.shields.io/github/last-commit/vercel-labs/agent-browser?style=flat)](https://github.com/vercel-labs/agent-browser/commits) [![skills.sh](https://www.skills.sh/b/vercel-labs/agent-browser)](https://www.skills.sh/vercel-labs/agent-browser)
+[![Stars](https://img.shields.io/github/stars/vercel-labs/agent-browser?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/vercel-labs/agent-browser) [![last commit](https://img.shields.io/github/last-commit/vercel-labs/agent-browser?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/vercel-labs/agent-browser/commits) [![skills.sh](https://www.skills.sh/b/vercel-labs/agent-browser)](https://www.skills.sh/vercel-labs/agent-browser)
 
 Vercel 出的浏览器命令行，专门给 AI 用。AI 打开网页后先读出页面结构，给按钮、输入框编上号（`@e1`、`@e2`），再按编号去点、去填，最后截图，还能对比改动前后的截图。读的是精简过的页面结构，不用每一步都传截图。
 
@@ -172,9 +186,9 @@ skill 只是个入口，真正干活的是 `agent-browser` 命令，两样都要
 
 ### guizang-ppt：网页 PPT，能改字、能演示
 
-<a href="https://github.com/op7418/guizang-ppt-skill"><img src="assets/cards/guizang-ppt.webp" alt="guizang-ppt 生成的网页 PPT 页面" width="100%"></a>
+<a href="https://github.com/op7418/guizang-ppt-skill"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/guizang-ppt-dark.webp"><img src="assets/cards/guizang-ppt.webp" alt="guizang-ppt 生成的网页 PPT 页面" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/op7418/guizang-ppt-skill?style=flat&label=Stars)](https://github.com/op7418/guizang-ppt-skill) [![last commit](https://img.shields.io/github/last-commit/op7418/guizang-ppt-skill?style=flat)](https://github.com/op7418/guizang-ppt-skill/commits) [![skills.sh](https://www.skills.sh/b/op7418/guizang-ppt-skill)](https://www.skills.sh/op7418/guizang-ppt-skill)
+[![Stars](https://img.shields.io/github/stars/op7418/guizang-ppt-skill?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/op7418/guizang-ppt-skill) [![last commit](https://img.shields.io/github/last-commit/op7418/guizang-ppt-skill?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/op7418/guizang-ppt-skill/commits) [![skills.sh](https://www.skills.sh/b/op7418/guizang-ppt-skill)](https://www.skills.sh/op7418/guizang-ppt-skill)
 
 做出来是一个 HTML 文件，横向翻页，带演讲者视图、讲稿备注和计时，文字都能改。在 Codex 里还会问你要不要用 GPT-Image 配图，也能顺手出公众号、小红书封面。要能改字、要上台演示，选它。
 
@@ -186,9 +200,9 @@ npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-s
 
 ### codex-ppt：每页一张图，风格统一
 
-<a href="https://github.com/ningzimu/codex-ppt-skill"><img src="assets/cards/codex-ppt.webp" alt="codex-ppt 生成的手绘风格 PPT" width="100%"></a>
+<a href="https://github.com/ningzimu/codex-ppt-skill"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/codex-ppt-dark.webp"><img src="assets/cards/codex-ppt.webp" alt="codex-ppt 生成的手绘风格 PPT" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/ningzimu/codex-ppt-skill?style=flat&label=Stars)](https://github.com/ningzimu/codex-ppt-skill) [![last commit](https://img.shields.io/github/last-commit/ningzimu/codex-ppt-skill?style=flat)](https://github.com/ningzimu/codex-ppt-skill/commits) [![skills.sh](https://www.skills.sh/b/ningzimu/codex-ppt-skill)](https://www.skills.sh/ningzimu/codex-ppt-skill)
+[![Stars](https://img.shields.io/github/stars/ningzimu/codex-ppt-skill?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/ningzimu/codex-ppt-skill) [![last commit](https://img.shields.io/github/last-commit/ningzimu/codex-ppt-skill?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/ningzimu/codex-ppt-skill/commits) [![skills.sh](https://www.skills.sh/b/ningzimu/codex-ppt-skill)](https://www.skills.sh/ningzimu/codex-ppt-skill)
 
 每一页直接生成成一张图，再拼成 PPTX，风格统一。要每页都好看、拿去发图，选它。文字不能直接改，要改字可以再用作者的 [image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill) 转回可编辑的 PPT。
 
@@ -200,9 +214,9 @@ npx -y skills@latest add ningzimu/codex-ppt-skill --skill codex-ppt --agent code
 
 ### hyperframes：写网页，出 MP4 视频
 
-<a href="https://github.com/heygen-com/hyperframes"><img src="assets/cards/hyperframes.webp" alt="hyperframes 自带的一个视频设计模板" width="100%"></a>
+<a href="https://github.com/heygen-com/hyperframes"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/hyperframes-dark.webp"><img src="assets/cards/hyperframes.webp" alt="hyperframes 自带的一个视频设计模板" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/heygen-com/hyperframes?style=flat&label=Stars)](https://github.com/heygen-com/hyperframes) [![last commit](https://img.shields.io/github/last-commit/heygen-com/hyperframes?style=flat)](https://github.com/heygen-com/hyperframes/commits) [![skills.sh](https://www.skills.sh/b/heygen-com/hyperframes)](https://www.skills.sh/heygen-com/hyperframes)
+[![Stars](https://img.shields.io/github/stars/heygen-com/hyperframes?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/heygen-com/hyperframes) [![last commit](https://img.shields.io/github/last-commit/heygen-com/hyperframes?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/heygen-com/hyperframes/commits) [![skills.sh](https://www.skills.sh/b/heygen-com/hyperframes)](https://www.skills.sh/heygen-com/hyperframes)
 
 HeyGen 开源的视频框架：AI 用 HTML、CSS 和动画把每一帧写出来，再渲染成 MP4。产品介绍、把 PR 做成讲解视频、数据图表动画、带字幕的短视频都能做，图里是它自带的一个设计模板。
 
@@ -220,9 +234,9 @@ npx hyperframes skills update
 
 ### nature-skills：写论文和科研绘图
 
-<a href="https://github.com/Yuan1z0825/nature-skills"><img src="assets/cards/nature-skills.webp" alt="nature-figure 的期刊风格柱状图" width="100%"></a>
+<a href="https://github.com/Yuan1z0825/nature-skills"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/nature-skills-dark.webp"><img src="assets/cards/nature-skills.webp" alt="nature-figure 的期刊风格柱状图" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/Yuan1z0825/nature-skills?style=flat&label=Stars)](https://github.com/Yuan1z0825/nature-skills) [![last commit](https://img.shields.io/github/last-commit/Yuan1z0825/nature-skills?style=flat)](https://github.com/Yuan1z0825/nature-skills/commits) [![skills.sh](https://www.skills.sh/b/Yuan1z0825/nature-skills)](https://www.skills.sh/Yuan1z0825/nature-skills)
+[![Stars](https://img.shields.io/github/stars/Yuan1z0825/nature-skills?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/Yuan1z0825/nature-skills) [![last commit](https://img.shields.io/github/last-commit/Yuan1z0825/nature-skills?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/Yuan1z0825/nature-skills/commits) [![skills.sh](https://www.skills.sh/b/Yuan1z0825/nature-skills)](https://www.skills.sh/Yuan1z0825/nature-skills)
 
 中文作者做的一整套科研 skill，23 个：查文献、核引用、精读论文出阅读卡、按 Nature 风格润色、画期刊配图、论文转中文 PPT、写数据可用性声明，还能把论文改成专利草稿。
 
@@ -236,9 +250,9 @@ npx skills add Yuan1z0825/nature-skills --agent codex --skill nature-figure --ye
 
 ### shuorenhua：中文去 AI 味
 
-<a href="https://github.com/MrGeDiao/shuorenhua"><img src="assets/cards/shuorenhua.webp" alt="shuorenhua 改写前后对比：去掉「值得注意的是」「简而言之」，数字保留" width="100%"></a>
+<a href="https://github.com/MrGeDiao/shuorenhua"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/shuorenhua-dark.webp"><img src="assets/cards/shuorenhua.webp" alt="shuorenhua 改写前后对比：去掉「值得注意的是」「简而言之」，数字保留" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/MrGeDiao/shuorenhua?style=flat&label=Stars)](https://github.com/MrGeDiao/shuorenhua) [![last commit](https://img.shields.io/github/last-commit/MrGeDiao/shuorenhua?style=flat)](https://github.com/MrGeDiao/shuorenhua/commits) [![skills.sh](https://www.skills.sh/b/MrGeDiao/shuorenhua)](https://www.skills.sh/MrGeDiao/shuorenhua)
+[![Stars](https://img.shields.io/github/stars/MrGeDiao/shuorenhua?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/MrGeDiao/shuorenhua) [![last commit](https://img.shields.io/github/last-commit/MrGeDiao/shuorenhua?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/MrGeDiao/shuorenhua/commits) [![skills.sh](https://www.skills.sh/b/MrGeDiao/shuorenhua)](https://www.skills.sh/MrGeDiao/shuorenhua)
 
 改写中文，去掉模板腔，事实和数字一个不丢，图里是作者给的例子。写 README、公众号、周报、产品说明时用得上，也可以只标出问题不改。
 
@@ -250,9 +264,9 @@ npx skills add MrGeDiao/shuorenhua --agent codex -g --yes
 
 ### baoyu-skills：公众号和小红书
 
-<a href="https://github.com/JimLiu/baoyu-skills"><img src="assets/cards/baoyu-skills.webp" alt="baoyu-xhs-images 生成的小红书图卡" width="100%"></a>
+<a href="https://github.com/JimLiu/baoyu-skills"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/baoyu-skills-dark.webp"><img src="assets/cards/baoyu-skills.webp" alt="baoyu-xhs-images 生成的小红书图卡" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/JimLiu/baoyu-skills?style=flat&label=Stars)](https://github.com/JimLiu/baoyu-skills) [![last commit](https://img.shields.io/github/last-commit/JimLiu/baoyu-skills?style=flat)](https://github.com/JimLiu/baoyu-skills/commits) [![skills.sh](https://www.skills.sh/b/JimLiu/baoyu-skills)](https://www.skills.sh/JimLiu/baoyu-skills)
+[![Stars](https://img.shields.io/github/stars/JimLiu/baoyu-skills?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/JimLiu/baoyu-skills) [![last commit](https://img.shields.io/github/last-commit/JimLiu/baoyu-skills?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/JimLiu/baoyu-skills/commits) [![skills.sh](https://www.skills.sh/b/JimLiu/baoyu-skills)](https://www.skills.sh/JimLiu/baoyu-skills)
 
 宝玉（JimLiu）的一组内容创作 skill：排版 Markdown、转成公众号能用的 HTML、生成封面和文章配图、小红书图卡、信息图、漫画。作者也建议别全装，做公众号、小红书常用这四个：
 
@@ -268,9 +282,9 @@ npx skills add jimliu/baoyu-skills --agent codex -g \
 
 ### 飞书 lark-cli：让 Codex 读写你的飞书
 
-<a href="https://github.com/larksuite/cli"><img src="assets/cards/lark-cli.webp" alt="飞书 lark-cli：先装命令行工具，挑要用的 skill，在浏览器里建应用并登录，然后让 Codex 读写你的飞书" width="100%"></a>
+<a href="https://github.com/larksuite/cli"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/lark-cli-dark.webp"><img src="assets/cards/lark-cli.webp" alt="飞书 lark-cli：先装命令行工具，挑要用的 skill，在浏览器里建应用并登录，然后让 Codex 读写你的飞书" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&label=Stars)](https://github.com/larksuite/cli) [![last commit](https://img.shields.io/github/last-commit/larksuite/cli?style=flat)](https://github.com/larksuite/cli/commits) [![skills.sh](https://www.skills.sh/b/larksuite/cli)](https://www.skills.sh/larksuite/cli)
+[![Stars](https://img.shields.io/github/stars/larksuite/cli?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/larksuite/cli) [![last commit](https://img.shields.io/github/last-commit/larksuite/cli?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/larksuite/cli/commits) [![skills.sh](https://www.skills.sh/b/larksuite/cli)](https://www.skills.sh/larksuite/cli)
 
 飞书官方（larksuite 团队）出的命令行工具，MIT 许可，带 28 个 skill：云文档、知识库、多维表格、电子表格、幻灯片、日历、消息、邮件、会议纪要、任务、审批、OKR。装上以后，Codex 用你自己的飞书账号去读写这些东西，比如「把这篇飞书文档总结成三条」「在这个多维表格里加一列，把这周的数据填进去」「看看我明天下午有没有空，约个会」。
 
@@ -292,9 +306,9 @@ npx skills add https://open.feishu.cn/lark-cli/skills/regular --agent codex -g -
 
 ## OpenAI 官方目录：浏览器、PDF、GitHub
 
-<a href="https://github.com/openai/skills"><img src="assets/cards/openai-skills.webp" alt="OpenAI 官方 skill 目录：playwright、pdf、gh-fix-ci 等" width="100%"></a>
+<a href="https://github.com/openai/skills"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/openai-skills-dark.webp"><img src="assets/cards/openai-skills.webp" alt="OpenAI 官方 skill 目录：playwright、pdf、gh-fix-ci 等" width="100%"></picture></a>
 
-[![Stars](https://img.shields.io/github/stars/openai/skills?style=flat&label=Stars)](https://github.com/openai/skills) [![last commit](https://img.shields.io/github/last-commit/openai/skills?style=flat)](https://github.com/openai/skills/commits) [![skills.sh](https://www.skills.sh/b/openai/skills)](https://www.skills.sh/openai/skills)
+[![Stars](https://img.shields.io/github/stars/openai/skills?style=flat&label=Stars&logo=github&logoColor=white&labelColor=000000&color=0a0a0a)](https://github.com/openai/skills) [![last commit](https://img.shields.io/github/last-commit/openai/skills?style=flat&labelColor=000000&color=0a0a0a)](https://github.com/openai/skills/commits) [![skills.sh](https://www.skills.sh/b/openai/skills)](https://www.skills.sh/openai/skills)
 
 Codex 0.167.0 自带 5 个：画图的 `imagegen`、查官方文档的 `openai-docs`、做 skill 的 `skill-creator`、装 skill 的 `skill-installer`，还有一个只能手动叫的 `review-agent`（审代码改动）。10 月 19 日那版的 `plugin-creator` 不在了。另外有 39 个精选的可以按需装，这几个最常用：
 
@@ -322,21 +336,6 @@ playwright 要电脑上有 Node.js；pdf 会装几个 Python 库，渲染页面�
 - 收什么：源码看过，按页面上的命令在 Codex 里装过、能认到，对用 Codex 的中文用户真有用处。GitHub 星数和 skills.sh 安装量用来找候选，不是收录的理由。
 - 多久一次：每两周核一次星数、版本、安装命令和图片，新收的写进「本期值得看」。卡片上的徽章自动更新，不用等我们改。
 - 什么时候撤：装不上了、作者不再维护，或者出现了明显更好的同类。撤下和改动都记在[更新日志](CHANGELOG.md)。
-
-## 国内怎么开通 Codex
-
-用 Codex 要有 ChatGPT 的套餐。Free 和 Go 额度少，官方写的是在桌面版里用 GPT-5.6 Terra、GPT-6 Luna；GPT-6.1 Sol、GPT-6.1 Terra、Astra 和网页版的云端任务要 Plus 或 Pro。没有海外卡，可以微信付款，由 AONIR 充值到你自己的账号：
-
-| 套餐 | 微信付款 | 官方价 | Codex 额度 |
-|---|---|---|---|
-| [ChatGPT Plus](https://aonir.com/chatgpt-plus/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_plus) | ¥168 / 月 | $20 | 基准，每 5 小时和每周各有上限 |
-| [ChatGPT Pro 100](https://aonir.com/chatgpt-pro/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_5x) | ¥730 / 月 | Pro 100，$100 | 约为 Plus 的 10 倍 |
-| [ChatGPT Pro 200](https://aonir.com/chatgpt-pro-200/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_10x) | ¥1400 / 月 | Pro 200，$200 | 约为 Plus 的 20 倍 |
-| [ChatGPT Pro 500](https://aonir.com/chatgpt-pro-500/?utm_source=github&utm_medium=referral&utm_campaign=codex_skills&utm_content=cta_pro_500) | ¥3500 / 月，客服开通 | Pro 500，$500 | 约为 Plus 的 50 倍 |
-
-美国时间 10 月 29 日起，Pro 三档的 Work / Codex 额度翻倍，Plus 不变（[OpenAI 帮助中心](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)）；表里的倍数是 [Codex 负责人 Tibo](https://x.com/thsottiaux/status/2115850175868727621) 的说法。
-
-Codex 装不上、登录不了、报错，看我们另一个仓库：[Codex 国内使用与报错速查](https://github.com/Avarce/codex-china-guide)。
 
 ## 推荐一个 skill
 
